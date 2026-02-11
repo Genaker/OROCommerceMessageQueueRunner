@@ -1,0 +1,21 @@
+services:
+    _defaults:
+        public: true
+
+    Genaker\Bundle\MessageQueueDebugBundle\Command\MessageQueueListCommand:
+        arguments:
+            - '@oro_message_queue.client.meta.destination_meta_registry'
+            - '@doctrine'
+            - '%oro_message_queue.dbal.table%'
+            - '%oro_message_queue.dbal.connection%'
+        tags:
+            - { name: console.command }
+
+    Genaker\Bundle\MessageQueueDebugBundle\Command\MessageQueueProcessCommand:
+        arguments:
+            - '@oro_message_queue.client.queue_consumer'
+            - '@oro_message_queue.client.meta.destination_meta_registry'
+            - '@oro_message_queue.log.consumer_state'
+            - '@logger'
+        tags:
+            - { name: console.command }

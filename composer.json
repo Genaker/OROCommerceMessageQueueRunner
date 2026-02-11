@@ -1,0 +1,29 @@
+{
+    "name": "genaker/orocommerce-message-queue-runner",
+    "description": "CLI commands for debugging OroCommerce message queue processors",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "oro/platform": "6.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.5",
+        "oro/platform": "6.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Genaker\\Bundle\\MessageQueueDebugBundle\\": "src/Genaker/Bundle/MessageQueueDebugBundle/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Genaker\\Bundle\\MessageQueueDebugBundle\\Tests\\": "src/Genaker/Bundle/MessageQueueDebugBundle/Tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
