@@ -1,6 +1,6 @@
 # Genaker Message Queue Debug Bundle
 
-![Genaker Message Queue Debug](message-queue-debug-banner.png)
+![Genaker Message Queue Debug](src/Genaker/Bundle/MessageQueueDebugBundle/message-queue-debug-banner.png)
 
 CLI commands for debugging OroCommerce message queue processors. Run processors via CLI to debug with breakpoints, list all jobs with message counts, and process specific messages.
 
